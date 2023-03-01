@@ -1,0 +1,30 @@
+
+
+
+
+
+<div class="hm">
+    <h1>users list</h1>
+<table class="table">
+    <tr>
+        <th>user name</th>
+        <th>item name</th>
+        <th>bill id</th>
+        <th>total bill</th>
+        
+       
+    </tr>
+    <tr *ngFor="let user of this._state.user; let i = index">
+        <td>{{user.user_name}}</td>
+        <td>{{user.item_name}}</td>
+        <td>{{user.billid}}</td>
+        <td>{{user.totalbill}}</td>
+
+        <button type="button" class="btn btn-outline-success" (click)="setter(i)" >Edit</button>
+        <button type="button" class="btn btn-outline-danger" (click)="this._state.deleteuser(i)">Delete</button>
+   
+    
+</tr> 
+
+</table>
+</div>
